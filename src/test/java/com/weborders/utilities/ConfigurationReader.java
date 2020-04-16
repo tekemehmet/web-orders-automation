@@ -6,6 +6,7 @@ import java.util.Properties;
 public class ConfigurationReader {
 
     private static Properties configFile;
+
     static {
         try {
             String path = System.getProperty("user.dir")+"/configuration.properties";
@@ -19,6 +20,7 @@ public class ConfigurationReader {
         }
     }
     public static String getProperty(String keyName) {
+
         return configFile.getProperty(keyName);
     }
 }
